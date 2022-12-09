@@ -30,7 +30,7 @@
     width: 80%;
     margin: 0.8rem auto 0;
     gap: 1rem;
-    text-align: justify;
+    text-align: flex;
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
