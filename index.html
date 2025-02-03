@@ -3,196 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunil Kumar | Portfolio</title>
+    <title>Your Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-        }
-
-        document.addEventListener("scroll", function() {
-            let sections = document.querySelectorAll("section");
-            sections.forEach(section => {
-                let rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight * 0.75) {
-                    section.style.opacity = "1";
-                    section.style.transform = "translateY(0)";
-                }
-            });
-        });
-    </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: linear-gradient(270deg, #000, #4B0082);
-            background-size: 400% 400%;
-            animation: gradientAnimation 6s infinite alternate;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            position: relative;
-        }
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 20px;
-            background: white;
-            margin: 20px auto;
-            width: 80%;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        button {
-            background: #ff9800;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin-top: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        body.dark-mode {
-            background-color: #121212;
-            color: white;
-        }
-        body.dark-mode section {
-            background: #1e1e1e;
-        }
-        /* Dark mode toggle switch */
-        .toggle-container {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-        .toggle-container input {
-            display: none;
-        }
-        .toggle-container label {
-            cursor: pointer;
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 30px;
-            background-color: #ccc;
-            border-radius: 30px;
-            transition: background-color 0.3s;
-        }
-        .toggle-container label::before {
-            content: '';
-            position: absolute;
-            top: 3px;
-            left: 3px;
-            width: 24px;
-            height: 24px;
-            background-color: white;
-            border-radius: 50%;
-            transition: transform 0.3s;
-        }
-        .toggle-container input:checked + label {
-            background-color: #4B0082;
-        }
-        .toggle-container input:checked + label::before {
-            transform: translateX(30px);
-        }
-    </style>
 </head>
 <body>
-    <header>
+    <nav>
+        <ul>
+            <li><a href="#about" class="active">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="active-section">
         <h1>Sunil Kumar Abbineni</h1>
-        <p>Automation Engineer | Cloud Computing | Test Automation</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- Dark mode toggle -->
-        <div class="toggle-container">
-            <input type="checkbox" id="darkModeToggle" onchange="toggleTheme()">
-            <label for="darkModeToggle"></label>
-        </div>
-    </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Automation Engineer with 4+ years of experience in test automation, cloud computing, and DevOps. I specialize in designing scalable automation frameworks, reducing regression testing cycles, and optimizing cloud-native testing pipelines. Passionate about building high-quality software solutions that enhance productivity and reliability. Experienced in leading Agile teams, with a strong track record of delivering projects on time.</p>
+        <p>Automation Engineer with 4+ years of experience designing scalable automation frameworks, reducing regression testing cycles by 90%. Expertise in Selenium, Java, Python, and AWS services to deliver optimized cloud-native testing pipelines. Proven ability to lead Agile teams, with a 99.8% on-time delivery rate.</p>
+        <p>Email: sunilkumar.abbineni@gmail.com</p>
+        <p>LinkedIn: <a href="#">Profile</a></p>
+        <p>GitHub: <a href="#">Profile</a></p>
     </section>
 
     <section id="experience">
         <h2>Experience</h2>
-        <h3>Associate - Cognizant Technology Solutions</h3>
-        <p>Aug 2021 – Present | Hyderabad</p>
-        <ul>
-            <li>Developed automation scripts reducing regression testing by 90%.</li>
-            <li>Enhanced defect detection by 30% and optimized cloud-native testing pipelines.</li>
-        </ul>
-        <h3>Intern - Cognizant Technology Solutions</h3>
-        <p>Apr 2021 – Jun 2021 | Hyderabad</p>
-        <ul>
-            <li>Led a 6-member team to design Selenium-based automation frameworks.</li>
-        </ul>
-    </section>
-    
-    <section id="education">
-        <h2>Education</h2>
-        <h3>M.Tech in Cloud Computing</h3>
-        <p>Birla Institute of Technology and Science Pilani, Jun 2025</p>
-        <h3>B.Tech in Electronics and Communications Engineering</h3>
-        <p>St. Peter’s Engineering College, Hyderabad, Aug 2021</p>
+        <p>Associate
+            Cognizant Technology Solutions	Aug 2021 - Present
+            Hyderabad 
+            •	Engineered regression automation scripts, reducing testing time by 90% and increasing efficiency.
+            •	Developed and executed automated and manual test cases across telecom, e-commerce, and banking domains, enhancing defect detection rates by 30% and identifying 15% more critical defects. 
+            •	Deployed AWS-powered cloud-native testing pipelines, cutting operational costs by 15%.
+            •	Spearheaded Agile-based test planning, achieving a 99.8% project success rate.
+            </p>
+        <p>
+            Intern
+            Cognizant Technology Solutions	Apr 2021 - Jun 2021
+            Hyderabad
+            •	Led a 6-member team to design Selenium-based automation frameworks, reducing manual testing efforts by 40%.
+            •	Applied Scrum methodology to streamline workflows and improving resource efficiency.
+            
+            President 
+            Rotaract Club, St. Peter's Engineering College	Jul 2019 - Jun 2020
+            Hyderabad
+            •	Managed 110+ students and 20+ core members, successfully executing 100+ projects and securing 7 awards.
+            •	Enhanced project efficiency by 20% through strategic planning and PR initiatives.
+            </p>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Programming:</strong> Java, Python, SQL, Node.js</li>
-            <li><strong>Test Automation:</strong> Selenium, TestNG, JMeter, REST APIs</li>
-            <li><strong>DevOps & CI/CD:</strong> Jenkins, Docker, Kubernetes, GitHub</li>
-            <li><strong>Cloud & Big Data:</strong> AWS (Lambda, CloudWatch), Kafka, PostgreSQL</li>
-        </ul>
+    <section id="education">
+        <h2>Education</h2>
+        <p>M.Tech in Cloud Computing
+            Birla Institute of Technology and Science Pilani	Jun - 2025
+            </p>
+        <p>B.Tech in Electronics and Communications Engineering
+            St. Peter’s Engineering College, Hyderabad	Aug - 2021
+            </p>
     </section>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Predictive Maintenance for Cloud-Native Apps</strong> - AWS Lambda & CloudWatch reduced downtime by 25%.</li>
-            <li><strong>API-driven Healthcare Solution</strong> - NLP-based API with AWS & Flask improved diagnostic accuracy by 65%.</li>
-            <li><strong>House Rent Prediction AI</strong> - FastAPI & MLflow automated ML pipelines.</li>
-        </ul>
-    </section>
-    
+
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:sunilkumar.abbineni@gmail.com">sunilkumar.abbineni@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/sunil-kumar-abbineni/" target="_blank">Profile</a></p>
-        <p>GitHub: <a href="https://github.com/sunilkumarabbineni" target="_blank">Profile</a></p>
+        <h2>Contact Me</h2>
+        <p>Email: sunilkumar.abbineni@gmail.com</p>
+        <p>LinkedIn: <a href="#">Profile</a></p>
+        <p>GitHub: <a href="#">Profile</a></p>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>

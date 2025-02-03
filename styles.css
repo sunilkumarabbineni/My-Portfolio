@@ -1,6 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    margin: 0;
+}
+
+nav {
+    background-color: #f0f0f0; /* Light background for navbar */
+    padding: 10px 0;
 }
 
 nav ul {
@@ -13,6 +19,26 @@ nav ul li {
     margin: 0 15px;
 }
 
+nav a {
+    text-decoration: none;
+    color: #333; /* Dark text color */
+}
+
+nav a.active {
+    font-weight: bold; /* Highlight active link */
+}
+
 section {
-    margin: 20px 0;
+    display: none; /* Hide all sections by default */
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+}
+
+.active-section {
+    display: block; /* Show active section */
+}
+
+h1, h2 {
+    color: #2c3e50; /* Darker text for headings */
 }
