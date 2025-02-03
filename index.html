@@ -5,6 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunil Kumar | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        document.addEventListener("scroll", function() {
+            let sections = document.querySelectorAll("section");
+            sections.forEach(section => {
+                let rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.75) {
+                    section.style.opacity = "1";
+                    section.style.transform = "translateY(0)";
+                }
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(270deg, #000, #4B0082);
+            background-size: 400% 400%;
+            animation: gradientAnimation 6s infinite alternate;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            background: white;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        button {
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+        body.dark-mode section {
+            background: #1e1e1e;
+        }
+        /* Dark mode toggle switch */
+        .toggle-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .toggle-container input {
+            display: none;
+        }
+        .toggle-container label {
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+        }
+        .toggle-container label::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        .toggle-container input:checked + label {
+            background-color: #4B0082;
+        }
+        .toggle-container input:checked + label::before {
+            transform: translateX(30px);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,16 +128,22 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <!-- Dark mode toggle -->
+        <div class="toggle-container">
+            <input type="checkbox" id="darkModeToggle" onchange="toggleTheme()">
+            <label for="darkModeToggle"></label>
+        </div>
     </header>
     
     <section id="about">
         <h2>About Me</h2>
-        <p>Automation Engineer with 4+ years of experience in test automation, cloud computing, and DevOps. Expertise in Selenium, Java, Python, and AWS-powered automation frameworks.</p>
+        <p>Automation Engineer with 4+ years of experience in test automation, cloud computing, and DevOps. I specialize in designing scalable automation frameworks, reducing regression testing cycles, and optimizing cloud-native testing pipelines. Passionate about building high-quality software solutions that enhance productivity and reliability. Experienced in leading Agile teams, with a strong track record of delivering projects on time.</p>
     </section>
 
     <section id="experience">
@@ -41,6 +161,14 @@
         </ul>
     </section>
     
+    <section id="education">
+        <h2>Education</h2>
+        <h3>M.Tech in Cloud Computing</h3>
+        <p>Birla Institute of Technology and Science Pilani, Jun 2025</p>
+        <h3>B.Tech in Electronics and Communications Engineering</h3>
+        <p>St. Peter’s Engineering College, Hyderabad, Aug 2021</p>
+    </section>
+
     <section id="skills">
         <h2>Skills</h2>
         <ul>
